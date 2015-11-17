@@ -9,7 +9,7 @@
   "mai": "wudi <wudi2852987@163.com>",
   "license": "MIT",
   "bin": {
-    "antd-init": "./bin/yw"
+    "yw": "./bin/yw"
   },
   "dependencies": {
     "through2": "~2.0.0",

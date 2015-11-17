@@ -16,5 +16,5 @@ $ npm i yw --save
 
 ```bash
 $ mkdir foo && cd foo
-$ yw
+$ yw init
 ```

@@ -1,19 +1,35 @@
 {
   "name": "yw",
   "version": "0.0.1",
-  "description": "易诊自动生成项目",
+  "description": "易诊前端构建工具",
+  "main": "index.js",
+  "bin": "./bin/yw",
+  "scripts": {
+    "test": "yw test"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wudi0431/yw"
   },
-  "mai": "wudi <wudi2852987@163.com>",
-  "license": "MIT",
-  "bin": {
-    "yw": "./bin/yw"
+  "keywords": [
+    "yw",
+    "构建",
+    "发布"
+  ],
+  "author": "tom",
+  "license": "MTK",
+  "bugs": {
+    "url": "https://github.com/wudi0431/yw/issues"
   },
+  "homepage": "https://github.com/wudi0431/yw",
   "dependencies": {
-    "through2": "~2.0.0",
-    "vinyl-fs": "~2.2.1",
-    "which": "~1.2.0"
+    "async": "^0.9.0",
+    "colors": "^1.0.3",
+    "finalhandler": "^0.3.4",
+    "map-stream": "0.0.5",
+    "minimist": "^1.1.1",
+    "serve-static": "^1.9.2",
+    "underscore": "^1.8.2",
+    "vinyl-fs": "^1.0.0"
   }
 }

@@ -1,8 +1,8 @@
 # yw
 
-[![NPM version](https://img.shields.io/npm/v/antd-init.svg?style=flat)](https://npmjs.org/package/antd-init)
+[![NPM version](https://img.shields.io/npm/v/yw.svg?style=flat)](https://www.npmjs.com/package/yw)
 
-[Ant Design](https://github.com/ant-design/ant-design) boilerplate generator.
+[yw](https://github.com/wudi0431/yw) boilerplate generator.
 
 ----
 

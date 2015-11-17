@@ -1,0 +1,19 @@
+{
+  "name": "yw",
+  "version": "0.0.1",
+  "description": "易诊自动生成项目",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ant-design/antd-init"
+  },
+  "mai": "wudi <wudi2852987@163.com>",
+  "license": "MIT",
+  "bin": {
+    "antd-init": "./bin/yw"
+  },
+  "dependencies": {
+    "through2": "~2.0.0",
+    "vinyl-fs": "~2.2.1",
+    "which": "~1.2.0"
+  }
+}

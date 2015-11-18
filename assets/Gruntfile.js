@@ -69,7 +69,13 @@ module.exports = function (grunt) {
             '<%= config.app %>/images/{,*/}*',
             '.tmp/scripts/{,*/}*.js'
           ],
-          port: 9000
+          port: 9000,
+          server: {
+            baseDir: ['.tmp', config.app],
+            routes: {
+              '/bower_components': './bower_components'
+            }
+          }
         }
       },
       test: {
@@ -77,7 +83,13 @@ module.exports = function (grunt) {
           port: 9001,
           open: false,
           logLevel: 'silent',
-          host: 'localhost'
+          host: 'localhost',
+          server: {
+            baseDir: ['.tmp', './test', config.app],
+            routes: {
+              '/bower_components': './bower_components'
+            }
+          }
         }
       },
       dist: {
@@ -108,8 +120,7 @@ module.exports = function (grunt) {
       target: [
         'Gruntfile.js',
         '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
+        '!<%= config.app %>/scripts/vendor/*'
       ]
     },
 
@@ -160,7 +171,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.app %>/styles',
-          src: ['*.{less}'],
+          src: '{,*/}*.less',
           dest: '.tmp/styles',
           ext: '.css'
         }]
@@ -413,7 +424,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'newer:eslint',
-    'test',
     'build'
   ]);
 };

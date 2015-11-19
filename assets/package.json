@@ -1,4 +1,26 @@
 {
+  "name": "your project name",
+  "version": "0.0.1",
+  "description": "auto project",
+  "homepage": "https://github.com/wudi0431/yw",
+  "author": {
+    "name": "wudi",
+    "email": "wudi2852987@163.com"
+  },
+  "main": "index.html",
+  "scripts": {
+    "start": "grunt server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wudi0431/yw"
+  },
+  "keywords": [
+    "yw",
+    "构建",
+    "发布"
+  ],
+  "license": "MTT",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
     "grunt": "^0.4.5",
@@ -28,9 +50,6 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "grunt test"
   },
   "eslintConfig": {
     "extends": [

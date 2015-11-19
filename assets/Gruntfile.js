@@ -44,7 +44,7 @@ module.exports = function (grunt) {
         files: ['Gruntfile.js']
       },
       less: {
-        files: ['<%= config.app %>/styles/{,*/}*.{less}'],
+        files: ['<%= config.app %>/styles/{,*/}*.less'],
         tasks: ['less', 'postcss']
       },
       styles: {
@@ -67,14 +67,14 @@ module.exports = function (grunt) {
             '<%= config.app %>/{,*/}*.html',
             '.tmp/styles/{,*/}*.css',
             '<%= config.app %>/images/{,*/}*',
+            '<%= config.app %>/fonts/{,*/}*',
+            '<%= config.app %>/view/{,*/}*',
+            '<%= config.app %>/styles/{,*/}*',
             '.tmp/scripts/{,*/}*.js'
           ],
           port: 9000,
           server: {
-            baseDir: ['.tmp', config.app],
-            routes: {
-              '/bower_components': './bower_components'
-            }
+            baseDir: ['.tmp', config.app]
           }
         }
       },
@@ -85,10 +85,7 @@ module.exports = function (grunt) {
           logLevel: 'silent',
           host: 'localhost',
           server: {
-            baseDir: ['.tmp', './test', config.app],
-            routes: {
-              '/bower_components': './bower_components'
-            }
+            baseDir: ['.tmp', './test', config.app]
           }
         }
       },
@@ -165,6 +162,7 @@ module.exports = function (grunt) {
         sourceMap: true,
         sourceMapEmbed: true,
         sourceMapContents: true,
+        syncImport:true,
         includePaths: ['.']
       },
       dist: {
@@ -217,7 +215,7 @@ module.exports = function (grunt) {
           '<%= config.dist %>/scripts/{,*/}*.js',
           '<%= config.dist %>/styles/{,*/}*.css',
           '<%= config.dist %>/images/{,*/}*.*',
-          '<%= config.dist %>/styles/fonts/{,*/}*.*',
+          '<%= config.dist %>/fonts/{,*/}*.*',
           '<%= config.dist %>/*.{ico,png}'
         ]
       }
@@ -328,9 +326,11 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
+            'images/{,*/}*.*',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'fonts/{,*/}/*.*',
+            'view/{,*/}/*.*',
+            'styles/{,*/}*.*'
           ]
         }]
       }
@@ -408,7 +408,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
+    //'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'postcss',
@@ -416,7 +416,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
+    //'modernizr',
     'filerev',
     'usemin',
     'htmlmin'

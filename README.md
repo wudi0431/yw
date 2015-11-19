@@ -9,12 +9,24 @@
 ## Install
 
 ```bash
-$ npm i yw --save
+$ cnpm / npm install yw -g
 ```
 
 ## Usage
 
 ```bash
-$ mkdir foo && cd foo
-$ yw init
+$ yw init projectname
+
+$ cd projectname
+
+$ cnpm / npm install
+
+启动项目 
+
+$ grunt server
+
+打包项目 
+
+$ grunt build
+
 ```

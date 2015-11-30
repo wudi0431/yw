@@ -18,10 +18,13 @@ module.exports = function (grunt) {
     useminPrepare: 'grunt-usemin'
   });
 
+
+  var veriosn = grunt.file.readJSON('package.json').version;
+
   // Configurable paths
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist/'+veriosn
   };
 
   // Define the configuration for all the tasks
@@ -330,7 +333,7 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'fonts/{,*/}/*.*',
             'view/{,*/}/*.*',
-            'styles/{,*/}*.*'
+            'styles/{,*/}*.css'
           ]
         }]
       }

@@ -1,13 +1,10 @@
 require.config({
-        baseUrl: 'script/',
+        baseUrl: 'scripts/',
         pahts:{
             'a':'a'
         }
     }
 )
-
 require(['a'], function (a) {
-
-
     alert(a());
 })

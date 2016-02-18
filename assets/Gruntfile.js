@@ -338,7 +338,7 @@ module.exports = function (grunt) {
         },
         concat: {
             dist: {
-                src: ['<%= config.app %>/scripts/{,*/}.js'],
+                src: ['<%= config.app %>/scripts/{,*/}*.js'],
                 dest: '<%= config.dist %>/scripts/all.js',
                 filter: function (filepath) {
                     if(filepath.indexOf('main')==-1){
@@ -361,6 +361,7 @@ module.exports = function (grunt) {
                         '*.{ico,png,txt}',
                         'images/{,*/}*.*',
                         '{,*/}*.html',
+                        'host.js',
                         'fonts/{,*/}/*.*',
                         'view/{,*/}/*.*',
                         'styles/{,*/}*.css'

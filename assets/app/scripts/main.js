@@ -1,6 +1,6 @@
 require.config({
         baseUrl: 'scripts/',
-        pahts:{
+        paths:{
             'a':'a'
         }
     }

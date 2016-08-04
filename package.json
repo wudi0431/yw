@@ -1,6 +1,6 @@
 {
   "name": "yw",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "易诊前端构建工具",
   "main": "index.js",
   "bin": "./bin/yw",
